@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Cessna172-ba.ac</path>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-property>sim/rendering/static-lod/bare</max-property>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>jour</object-name>
+		<emission>
+			<red>   0.5 </red>
+			<green> 0.5 </green>
+			<blue>  0.5 </blue>
+		</emission>
+	</animation>
+
+	<!-- Must be enclosed by a <text/> node -->
+	<text>
+		<!-- It should have a name. Can be used for other animations -->
+		<name>MpNameOsg</name>
+		<!-- Use offsets for the initial placement -->
+		<offsets>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>15</z-m>
+		</offsets>
+
+    <!-- instead of using pitch/heading/roll offset, one may use
+    axis-alignment -->
+    <!-- remember: x backwards, y right and z up -->
+    <axis-alignment>xz-plane</axis-alignment>
+    <!--
+    <axis-alignment>reversed-xy-plane</axis-alignment>
+    <axis-alignment>xz-plane</axis-alignment>
+    <axis-alignment>reversed-xz-plane</axis-alignment>
+    <axis-alignment>yz-plane</axis-alignment>
+    <axis-alignment>reversed-yz-plane</axis-alignment>
+    <axis-alignment>screen</axis-alignment>
+-->
+
+<!-- what type of text to draw, use on of literal, text-value or number-value -->
+<!-- A simple constant, never changing string -->
+<type type="string">literal</type>
+<text type="string">BR-RVD - C172 - 33298ft 489kt</text>
+
+<font-resolution>
+	<width type="int">128</width>
+	<height type="int">128</height>
+</font-resolution>
+<font>lcd.txf</font>
+
+<layout>left-to-right</layout> <!-- default -->
+    <!--
+    <layout>right-to-left</layout>
+    <layout>vertical</layout>
+-->
+
+<draw-text type="bool">true</draw-text> <!-- draw the text itself -->
+<draw-alignment type="bool">false</draw-alignment> <!-- draw crosshair at object center -->
+<draw-boundingbox type="bool">false</draw-boundingbox> <!-- draw a bounding box -->
+
+<!--font>led.txf</font--> <!-- The font file name, relative to data/Fonts -->
+<character-size type="double">2</character-size> <!-- size (height) im meters -->
+<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+<max-height>25</max-height> <!-- the maximum height of the text -->
+<max-width>100</max-width> <!-- the maximum width of the text -->
+<font-resolution>
+	<width type="int">32</width>
+	<height type="int">32</height>
+</font-resolution>
+
+<!-- chose one of the kerning types or omit for default -->
+<kerning>default</kerning>
+    <!--
+    <kerning>unfitted</kerning>
+    <kerning>none</kerning>
+-->
+
+<alignment>center-center</alignment> <!-- alignment of the text itself -->
+    <!-- possible values are
+    <alignment>left-top</alignment>
+    <alignment>left-center</alignment>
+    <alignment>left-bottom</alignment>
+    <alignment>center-top</alignment>
+    <alignment>center-center</alignment>
+    <alignment>center-bottom</alignment>
+    <alignment>right-top</alignment>
+    <alignment>right-center</alignment>
+    <alignment>right-bottom</alignment>
+    <alignment>left-baseline</alignment>
+    <alignment>center-baseline</alignment>
+    <alignment>right-baseline</alignment>
+    <alignment>baseline</alignment>
+-->
+
+</text>
+
+ <!--animation>
+    <type>material</type>
+    <emission>
+      <red>0</red>
+	  <green>0</green>
+	  <blue>0</blue>
+    </emission>
+    <ambient>
+      <red alias="../../../params/color/red"/>
+      <green alias="../../../params/color/green"/>
+      <blue alias="../../../params/color/blue"/>
+    </ambient>
+    <diffuse>
+      <red alias="../../../params/color/red"/>
+      <green alias="../../../params/color/green"/>
+      <blue alias="../../../params/color/blue"/>
+    </diffuse>
+    <specular>
+      <red alias="../../../params/color/red"/>
+      <green alias="../../../params/color/green"/>
+      <blue alias="../../../params/color/blue"/>
+    </specular>
+</animation-->
+
+
+<animation>
+	<type>billboard</type>
+	<object-name>MpNameOsg</object-name>
+	<spherical type="bool">false</spherical>
+</animation>
+
+<animation>
+	<type>dist-scale</type>
+	<object-name>MpNameOsg</object-name>
+	<interpolation>
+		<entry>
+			<ind>50</ind>
+			<dep>1</dep>
+		</entry>
+		<entry>
+			<ind>300</ind>
+			<dep>1.5</dep>
+		</entry>
+		<entry>
+			<ind>1500</ind>
+			<dep>8</dep>
+		</entry>
+		<entry>
+			<ind>5000</ind>
+			<dep>16</dep>
+		</entry>
+		<entry>
+			<ind>20000</ind>
+			<dep>100</dep>
+		</entry>
+	</interpolation>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object>MpNameOsg</object>
+	<diffuse>
+		<red>0</red>
+		<green>1</green>
+		<blue>0</blue>
+	</diffuse>
+	<emission>
+		<red>0</red>
+		<green>1</green>
+		<blue>0</blue>
+	</emission>
+	<ambient>
+		<red>0</red>
+		<green>1</green>
+		<blue>0</blue>
+	</ambient>
+</animation>
+
+</PropertyList>
