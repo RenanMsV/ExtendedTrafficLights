@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<addons>
+			<extended-traffic-lights>
+		  		<name>extended_traffic_lights</name>
+		  		<version type= "double">0.0</version>
+		  		<authors>BR-RVD</authors>
+		  		<description>Use lights to locate your friends!</description>
+		  		<changelog>#first_release</changelog>
+		  		<defaultON type="bool">1</defaultON>
+		  	</extended-traffic-lights>
+	  	</addons>
+	</sim>
+</PropertyList>

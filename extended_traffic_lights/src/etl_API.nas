@@ -1,8 +1,6 @@
 #ExtendedTrafficLights
 
 
-# nome dos pilotos online
-
 var ExtendedTrafficLights = {
 
   new : func {
@@ -11,12 +9,12 @@ var ExtendedTrafficLights = {
   },
 
   print: func (text){
-  	print(text);
+  	print('Extended Traffic Lights::> ' ~ text);
   },
 
   initClock : func(){
-  	var refresh_timer = maketimer(.01, refreshCoord);
-   	refresh_timer.start();
+  	me.refresh_timer = maketimer(.01, refreshCoord);
+   	me.refresh_timer.start();
   },
 
 
@@ -61,7 +59,7 @@ var ExtendedTrafficLights = {
   	return objModel;
   },
 
-  refreshModelCoords : func(model){
+  setPosition : func(model){
   	var coord = props.globals.getNode("position");
    	var result = getGPS(0,0,0);
    	#objModel.getNode("latitude",1).setDoubleValue(coord.getNode("latitude-deg").getValue());
@@ -131,11 +129,9 @@ var ExtendedTrafficLights = {
   },
 };
 
-var enable = func {
-  e = ExtendedTrafficLights.new();
-  e.getOnlineList();
+PlaneNode = {
+	new : func (){
+		me.pos = {x:0, y:0, z:0};
+
+	}
 }
-
-enable();
-
-print("ExtendedTrafficLights script loaded");
