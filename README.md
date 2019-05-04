@@ -20,6 +20,7 @@ Then add this command line to your FlightGear Shortcut :
 
 --addon="C:\Users\USERNAME\Documents\FlightGear\Addons\extended_traffic_lights"
 
+Remember to replace USERNAME with your OS username.
 Note that this command line must have the correct path to the extended_traffic_lights folder.
 Do not know how to set command lines? Check here: http://wiki.flightgear.org/Command_line
 
